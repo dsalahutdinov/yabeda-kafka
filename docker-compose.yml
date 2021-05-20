@@ -1,0 +1,22 @@
+version: '3.4'
+
+services:
+  app:
+    image: ruby:latest
+    environment:
+      - BUNDLE_PATH=/bundle
+      - BUNDLE_CONFIG=/app/.bundle/config
+      - REDIS_URL=redis://redis
+    command: bash
+    working_dir: /app
+    volumes:
+      - .:/app:cached
+      - bundler_data:/bundle
+    tmpfs:
+      - /tmp
+
+  redis:
+    image: redis
+
+volumes:
+  bundler_data:

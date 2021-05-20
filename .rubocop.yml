@@ -1,0 +1,12 @@
+AllCops:
+  TargetRubyVersion: 2.5
+
+Style/Documentation:
+  Enabled: false
+
+Gemspec/RequiredRubyVersion:
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - spec/yabeda/kafka_spec.rb
