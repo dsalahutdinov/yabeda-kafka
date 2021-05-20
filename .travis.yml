@@ -8,7 +8,3 @@ before_script:
   - docker-compose run app bundle install
 script:
   - docker-compose run app bundle exec rake
-
-env:
-- RAILS_ENABLED=0
-- RAILS_ENABLED=1
