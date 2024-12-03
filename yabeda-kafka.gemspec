@@ -33,8 +33,7 @@ Gem::Specification.new do |spec|
 
   # TODO: remove prometheus-client dependency for kafka/monitoring
   # https://github.com/zendesk/ruby-kafka/blob/master/lib/kafka/prometheus.rb
-  spec.add_dependency 'prometheus-client'
-
+  spec.add_development_dependency 'prometheus-client'
   spec.add_development_dependency 'bundler'
   spec.add_development_dependency 'byebug'
   spec.add_development_dependency 'rake', '~> 10.0'
